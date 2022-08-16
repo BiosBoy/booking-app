@@ -1,0 +1,87 @@
+@import '../../styles/mediaQueries.module.scss'; 
+
+.bookingItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  position: relative;
+  margin-bottom: 20px;
+  
+  &::after {
+    content: '';
+    width: calc(100% - 50px);
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    bottom: -10px;
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+
+  @media #{$screen-tablet} {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.id,
+.from,
+.to,
+.state,
+.guests,
+.approved,
+.edit,
+.delete {
+  padding: 5px 10px;
+  margin: 10px 15px;
+  position: relative;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: '';
+    width: 1px;
+    height: calc(100% - 15px);
+    background-color: #ccc;
+    position: absolute;
+    right: -15px;
+  }
+
+  &:last-child {
+    &::after {
+      content: unset;
+    }
+  }
+
+  @media #{$screen-tablet} {
+    flex: 1;
+    justify-content: flex-start;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.state {
+  min-width: 150px;
+
+  @media #{$screen-tablet} {
+    min-width: unset;
+  }
+}

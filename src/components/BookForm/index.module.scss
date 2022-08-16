@@ -1,0 +1,155 @@
+@import '../../styles/globals.module.scss'; 
+@import '../../styles/mediaQueries.module.scss'; 
+
+$elemMinWidth: 100px;
+$elemMaxWidth: 250px;
+
+.bookingWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: inherit;
+  height: auto;
+  min-height: 250px;
+
+  @extend .container;
+}
+
+.header {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 55px;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 5px 15px;
+  height: inherit;
+  min-width: 155px;
+
+  &:last-of-type {
+    justify-content: center;
+
+    :first-child {
+      margin-top: 15px;
+    }
+  }
+
+  @media #{$screen-tablet} {
+    max-width: 550px;
+    width: 100%;
+  }
+
+  @media #{$screen-mobile} {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.label {
+  margin-bottom: 15px;
+}
+
+.fullWidth {
+  width: inherit;
+  max-width: inherit;
+  margin-left: 0;
+
+  &.column {
+    margin-bottom: 20px;
+  }
+
+  .inputElem {
+    width: inherit;
+    max-width: inherit;
+  }
+}
+
+.error {
+  margin-top: 10px;
+  color: red;
+  font-size: 12px;
+}
+
+.bookingForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px;
+  width: inherit;
+
+  @media #{$screen-tablet} {
+    height: auto;
+    flex-direction: column;
+  }
+}
+
+.inputElem {
+  border: 2px solid rgb(118, 118, 118);
+  padding: 5px 20px;
+  border-radius: 5px;
+  min-height: 59px;
+  min-width: $elemMinWidth;
+  max-width: $elemMaxWidth;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s linear;
+
+  &:hover,
+  &:active {
+    border: 2px solid #111;
+  }
+
+  @media #{$screen-tablet} {
+    max-width: 550px;
+  }
+
+  @media #{$screen-mobile} {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.reactSelect {
+  @extend .inputElem;
+
+  border: none;
+  transition: all 0.1s linear;
+  padding: 0;
+  border: 2px solid rgb(118, 118, 118);
+
+  &:hover,
+  &:active {
+    border: 2px solid #111;
+  }
+
+  >:nth-child(3) {
+    border: none;
+    max-height: 55px;
+
+    > span {
+      max-height: 42px;
+    }
+
+    > div {
+      top: 0px;
+      position: relative;
+      max-height: inherit;
+    }
+
+    input {
+      min-height: 43px;
+    }
+  }
+}
+
+:global() {
+  input {
+    @extend .inputElem;
+  }
+}

@@ -1,0 +1,46 @@
+@import '../../styles/mediaQueries.module.scss'; 
+
+.buttonWrap {
+  background-color: rgb(25, 118, 210);
+  min-height: 59px;
+  border-radius: 5px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 5px 5px;
+  border: none;
+  min-width: 245px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  &:hover,
+  &:active {
+    background-color: rgb(21, 101, 192);
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+
+    &:hover,
+    &:active {
+      background-color: rgb(25, 118, 210);
+      box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+    }
+  }
+
+  @media #{$screen-tablet} {
+    max-width: 550px;
+    width: 100%;
+  }
+
+  @media #{$screen-mobile} {
+    max-width: 100%;
+  }
+}
+
+.S {
+  min-width: 100px;
+  min-height: 45px;
+}

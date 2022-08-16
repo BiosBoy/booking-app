@@ -1,0 +1,11 @@
+@import './mediaQueries.module.scss';
+
+.container {
+    max-width: 1127px;
+    width: 100%;
+    margin-top: 50px;
+
+    @media #{$screen-tablet} {
+        max-width: 650px;
+    }
+}

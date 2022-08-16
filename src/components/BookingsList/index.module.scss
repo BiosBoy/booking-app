@@ -1,0 +1,34 @@
+@import '../../styles/globals.module.scss'; 
+
+.bookings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 15px;
+  box-sizing: border-box;
+  padding-right: 15px;
+
+  @extend .container;
+}
+
+.bookingsListWrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 300px;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
+
+.placeholderWrap {
+  align-items: center;
+  justify-content: center;
+}
+
+.headline {
+  width: 100%;
+  text-align: left;
+}

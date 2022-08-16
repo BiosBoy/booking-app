@@ -1,0 +1,40 @@
+.formWrap {
+    width: 100%;
+    max-width: 350px;
+}
+
+.editPopupWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: #11111173;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.editPopupContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    top: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 7px 20px 0px #1111116b;
+    padding: 40px;
+}
+
+.editPopupClose {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
